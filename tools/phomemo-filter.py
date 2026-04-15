@@ -25,8 +25,7 @@ def print_marker(lines=0x100):
 
 def print_footer():
     with os.fdopen(sys.stdout.fileno(), "wb", closefd=False) as stdout:
-        stdout.write(b'\x1b\x64\x02')
-        stdout.write(b'\x1b\x64\x02')
+        stdout.write(b'\x1b\x64\x00')
         stdout.write(b'\x1f\x11\x08')
         stdout.write(b'\x1f\x11\x0e')
         stdout.write(b'\x1f\x11\x07')
